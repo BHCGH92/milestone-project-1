@@ -1,0 +1,112 @@
+/* Google Fonts Import */
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:wght@100..900&display=swap");
+
+
+/* CSS Variables */
+:root {
+    --primary-font: "Lora", serif;
+    --secondary-font: "Roboto", sans-serif;
+    --primary-color: #333333; /* Charcoal */
+    --secondary-color: #ffffff; /* White */
+    --accent-color: #9ADBB3 ; /* Pastel Mint Green */
+    --highlight-color-light: #63C689; /* Dark Pastel Green */
+}
+
+
+/* Global Styles */
+
+h1 {
+    font-family: var(--secondary-font);
+}
+
+body {
+    font-family: var(--primary-font);
+    background-color: #333333;
+}
+
+.accent {
+    color: var(--accent-color);
+}
+
+/* Nav Bar */
+
+.custom-navbar {
+    font-family: var(--secondary-font);
+    font-size: x-large;
+    background-color: var(--primary-color) !important;
+    box-shadow: 0px 4px 10px var(--highlight-color-light, 0.08);
+}
+
+
+.custom-navbar .navbar-brand {
+    font-size: 1.7rem; /* Font size for Shiftrix logo on nav */
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+    color: var(--secondary-color) !important; /* Navbar text color */
+}
+
+.custom-navbar .nav-link.active {
+    color: var(--highlight-color-light) !important; /* active link color for nav */
+}
+
+.custom-navbar .nav-link:hover {
+    color: var(--highlight-color-light) !important; /* Hover effect for navbar */
+}
+
+/* Remove outline for the non-focus and on focus for the burger menu toggle */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Main */
+
+/* Made this white whilst amending my nav */
+.main-white {
+    background-color: white;  /* White background */
+    height: 100vh;            
+    width: 100%;                 
+  }
+
+
+/* Media Queries */
+
+/* Very small screens (320px width) */
+@media (min-width: 320px) {
+    .custom-navbar {
+        font-size: 1rem;
+    }
+    .custom-navbar .navbar-brand {
+        font-size: 1.2rem;
+        padding-left: 5px;
+    }
+}
+
+/* Large screens (1024px width) */
+@media (min-width: 1024px) {
+    .custom-navbar {
+        font-size: 1.3rem; 
+    }
+    .custom-navbar .navbar-brand {
+        font-size: 1.5rem;
+        padding-left: 5px;
+    }
+}
+
+/* Larger screens (1440px width) */
+@media (min-width: 1440px) {
+    /*Nav-bar related */
+    .custom-navbar {
+        font-size: 1.5rem;
+    }
+    .custom-navbar .navbar-brand {
+        font-size: 2rem;
+        padding-left: 10px;
+    }
+}
