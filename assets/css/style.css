@@ -15,7 +15,7 @@
 
 /* Global Styles */
 
-h1 {
+h1, h4 {
     font-family: var(--secondary-font);
 }
 
@@ -34,7 +34,12 @@ body {
     font-family: var(--secondary-font);
     font-size: x-large;
     background-color: var(--primary-color) !important;
-    box-shadow: 0px 4px 10px var(--highlight-color-light, 0.08);
+    box-shadow: 0px 4px 15px rgba(99, 198, 137, 0.5) !important;
+}
+
+.custom-navbar {
+    position: relative; /* Ensures shadow renders without this shadow get's hidden by bootstrap */
+    z-index: 10; /* Keeps navbar on top */
 }
 
 
@@ -56,7 +61,7 @@ body {
 }
 
 /* Remove outline for the non-focus and on focus for the burger menu toggle */
-.navbar-toggler {
+.navbar-toggler { 
     border: none;
 }
 
@@ -67,7 +72,32 @@ body {
 
 /* Main */
 
-/* Made this white whilst amending my nav */
+#focalImage {
+    height: 300px;
+    width: 100%;
+    background: linear-gradient(to bottom, #333333 5%, #333333 96%, #ffffff 100%); /* Adjust middle value to set height of black */
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    padding-left: 5%; /* Adds space from the left edge */
+}
+
+#focalImage .d-flex {
+    flex-direction: column; /* Ensures h1 and h3 stack */
+    justify-content: center; /* Centers content vertically */
+    text-align: left; /* Align text to the left */
+}
+
+#focalImage h1 {
+    font-size: 3rem;
+}
+
+#focalImage h1, 
+#focalImage h4 {
+    color: var(--secondary-color);
+}
+
+
+/* Added this as a white div underneath main image to help seperate out website whilst coding it */
 .main-white {
     background-color: white;  /* White background */
     height: 100vh;            
@@ -111,6 +141,9 @@ body {
 
 /* Medium screens (768px width) */
 @media (min-width: 768px) {
+
+    /* Navbar */
+
     .custom-navbar {
         font-size: 1rem;
     }
@@ -119,7 +152,33 @@ body {
         padding-left: 5px;
     }
 
+    /* Focal Image */
+
+    #focalImage {
+        height: 600px;
+        width: 100%;
+        background: url("../images/MockUpTimeManagement.webp") no-repeat center center/cover !important;
+        position: relative;
+    }
+    
+    #focalImage::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(51, 51, 51, 0.75); /* #333333 with 75% opacity */
+    }
+
+    #focalImage h1, 
+    #focalImage h4 {
+    color: var(--secondary-color);
+    }
+
+
     /* Footer */
+
     .custom-icon {
         color: var(--accent-color);
         font-size: 30px;
@@ -129,6 +188,9 @@ body {
 
 /* Large screens (1024px width) */
 @media (min-width: 1024px) {
+    
+    /* Navbar */
+
     .custom-navbar {
         font-size: 1.3rem; 
     }
@@ -136,7 +198,9 @@ body {
         font-size: 1.5rem;
         padding-left: 5px;
     }
+
     /* Footer */
+
     .custom-icon {
         color: var(--accent-color);
         font-size: 35px;
@@ -145,7 +209,9 @@ body {
 
 /* Larger screens (1440px width) */
 @media (min-width: 1440px) {
-    /*Nav-bar related */
+ 
+    /*Navbar */
+
     .custom-navbar {
         font-size: 1.5rem;
     }
@@ -153,7 +219,9 @@ body {
         font-size: 2rem;
         padding-left: 10px;
     }
+    
     /* Footer */
+    
     .custom-icon {
         color: var(--accent-color);
         font-size: 40px;
