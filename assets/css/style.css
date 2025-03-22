@@ -111,6 +111,10 @@ body {
     width: 100%;
 }
 
+div h1, h2 {
+    color: var(--secondary-color);
+}
+
 div p {
     color: #ffffff;
 }
@@ -127,6 +131,9 @@ div p {
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Slightly bigger shadow on hover */
 }
 
+.custom-card-header {
+    color: var(--accent-color); /* Change this to the color you prefer */
+}
 
 
 
@@ -221,7 +228,11 @@ footer h1 {
         padding-left: 5px;
     }
 
-    /* Focal Image */
+    /* Main */
+
+    main div p {
+        font-size: 1.1rem;
+    }
 
 
     /* Footer */
@@ -245,9 +256,11 @@ footer h1 {
         padding-left: 10px;
     }
 
-    /* Focal Image */
+    /* Main */
 
-
+    main div p {
+        font-size: 1.3rem;
+    }
     
     /* Footer */
     
