@@ -79,6 +79,10 @@ body {
     width: 100%;
 }
 
+div p {
+    color: #ffffff;
+}
+
 /* Card Styles */
 .card {
     background-color: #232323 !important; /* Darker than #333333 */
