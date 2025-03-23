@@ -135,8 +135,65 @@ div p {
     color: var(--accent-color); /* Change this to the color you prefer */
 }
 
+/* FAQ - Accordion Styles */
 
 
+.accordion {
+    background-color: #232323;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+}
+
+  /* Default button styles */
+  .accordion-button {
+    background-color: #232323; /* Accordion background */
+    color: #ffffff; /* Default text color */
+    border: none; /* Border color */
+  }
+
+  /* Hover text color */
+  .accordion-button:hover {
+    background-color: #9ADBB3;
+    color: #232323;
+  }
+
+  /* Expansion styles (opened) */
+  .accordion-button:not(.collapsed) {
+    background-color: #9ADBB3; 
+    color: #232323; 
+    border-color: #9ADBB3;
+  }
+
+  /* When accordion is active styles */
+  .accordion-button:not(.collapsed):hover {
+    background-color: #9ADBB3;
+    color: #232323;
+  }
+
+  /* Remove default blue outline */
+  .accordion-button:focus {
+    box-shadow: none;
+    border-color: none;
+  }
+
+  /* Style for the accordion body */
+  .accordion-body {
+    background-color: #232323;
+    color: #ffffff;
+  }
+
+  /* Default arrow color (white) */
+.accordion-button::after {
+    filter: brightness(0) invert(1); /* Makes the arrow white */
+}
+
+/* Change arrow color when active (expanded) or hovered */
+.accordion-button:not(.collapsed)::after,
+.accordion-button:hover::after {
+    filter: brightness(0) invert(0); /* Makes the arrow black */
+}
 
 /* Footer */
 
@@ -175,6 +232,12 @@ footer h1 {
         padding-left: 5px;
     }
 
+    /* Accordion */
+
+    .accordion {
+        max-width: 85%;
+    }
+
      /* Footer */
     .custom-icon {
         color: var(--accent-color);
@@ -206,6 +269,12 @@ footer h1 {
         font-size: 5rem;
     }
 
+    /* Accordion */
+
+    .accordion {
+        max-width: 95%;
+    }
+
     /* Footer */
 
     .custom-icon {
@@ -234,6 +303,15 @@ footer h1 {
         font-size: 1.1rem;
     }
 
+    .container h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Accordion */
+
+    .accordion {
+        max-width: 100%;
+    }
 
     /* Footer */
 
