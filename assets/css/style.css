@@ -75,18 +75,22 @@ body {
 /* Focal Image */
 
 #focalImage {
-    height: 450px;
+    height: 600px;
     width: 100%;
-    background: var(--primary-color);
+    background: linear-gradient(to top, #333333 0%, transparent 20%),
+    url('/assets/images/background1440.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
-    align-items: center; /* Centers content vertically */
-    padding-left: 5%; /* Adds space from the left edge */
+    align-items: center;
+    padding-left: 5%;
 }
 
 #focalImage .d-flex {
-    flex-direction: column; /* Ensures h1 and h3 stack */
-    justify-content: center; /* Centers content vertically */
-    text-align: left; /* Align text to the left */
+    flex-direction: column; /* Ensures text stacks */
+    justify-content: center;
+    text-align: left;
 }
 
 #focalImage h1 {
@@ -121,10 +125,10 @@ div p {
 
 /* Card Styles */
 .card {
-    background-color: #232323 !important; /* Darker than #333333 */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Small shadow */
-    border: none; /* Optional: remove the border if you want */
-    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    background-color: #232323 !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    border: none;
+    transition: box-shadow 0.3s ease;
 }
 
 .card:hover {
@@ -132,7 +136,7 @@ div p {
 }
 
 .custom-card-header {
-    color: var(--accent-color); /* Change this to the color you prefer */
+    color: var(--accent-color);
 }
 
 /* FAQ - Accordion Styles */
@@ -146,7 +150,6 @@ div p {
     overflow: hidden;
 }
 
-  /* Default button styles */
   .accordion-button {
     background-color: #232323; /* Accordion background */
     color: #ffffff; /* Default text color */
@@ -186,13 +189,20 @@ div p {
 
   /* Default arrow color (white) */
 .accordion-button::after {
-    filter: brightness(0) invert(1); /* Makes the arrow white */
+    filter: brightness(0) invert(1);
 }
 
 /* Change arrow color when active (expanded) or hovered */
 .accordion-button:not(.collapsed)::after,
 .accordion-button:hover::after {
-    filter: brightness(0) invert(0); /* Makes the arrow black */
+    filter: brightness(0) invert(0);
+}
+
+
+/* without this all FAQ buttons would be have the hover style on page load */
+.accordion-button:not(:hover):not(:focus) {
+    background-color: var(--darker-bg-color) !important; /* Adjust to match default */
+    color: var(--secondary-color);
 }
 
 /* Footer */
