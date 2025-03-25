@@ -78,7 +78,8 @@ body {
     height: 600px;
     width: 100%;
     background: linear-gradient(to top, #333333 0%, transparent 20%),
-    url('assets/images/backgroundFocalImage.png');
+    url('/assets/images/focal-image.png')
+    ;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
