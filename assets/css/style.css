@@ -328,6 +328,12 @@ footer h1 {
         max-width: 100%;
     }
 
+    /* Form Backgrounds */
+
+    .form-background {
+        background-color: var(--darker-bg-color);
+    }
+
     /* Footer */
 
     .custom-icon {
