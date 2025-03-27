@@ -16,6 +16,10 @@
 
 /* Global Styles */
 
+h1 {
+    font-size: 2.5rem;
+}
+
 h1, h2 {
     font-family: var(--secondary-font);
 }
@@ -315,7 +319,7 @@ footer h1 {
     }
 
     .container h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     /* Accordion */
@@ -346,6 +350,7 @@ footer h1 {
     }
 
     /* Main */
+
 
     main div p {
         font-size: 1.3rem;
