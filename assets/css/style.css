@@ -253,6 +253,10 @@ footer {
     background-color: var(--darker-bg-color) !important;
 }
 
+.footer-link {
+    color: var(--accent-color);
+}
+
 footer h1 {
     color: var(--secondary-color);
 }
