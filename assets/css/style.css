@@ -1,7 +1,6 @@
 /* Google Fonts Import */
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:wght@100..900&display=swap");
 
-
 /* CSS Variables */
 :root {
     --primary-font: "Lora", serif;
@@ -12,7 +11,6 @@
     --accent-color: #9ADBB3 ; /* Pastel Mint Green */
     --highlight-color-light: #63C689; /* Dark Pastel Green */
 }
-
 
 /* Global Styles */
 
@@ -33,6 +31,49 @@ body {
     color: var(--accent-color);
 }
 
+/*Form Global Styles */
+
+.form-font {
+    font-family: var(--secondary-font);
+}
+
+.form-background {
+    background-color: var(--darker-bg-color);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.form-label {
+    background-color: transparent !important;
+    text-align: left !important;
+    color: white !important;
+    display: block;
+    margin-bottom: 1px; /* Reduces space between label and input */
+}
+
+.form-control {
+    background-color: transparent !important;
+    color: white !important;
+    border: 1px solid white;
+}
+
+.form-control::placeholder {
+    color: var(--accent-color); /* Placeholder text color */
+}
+
+.form-control:focus {
+    background-color: transparent !important;
+    color: white !important;
+    border-color: var(--secondary-color);
+    box-shadow: none !important; /* Removes Bootstrap default glow */
+}
+
+.btn-primary {
+    color: var(--darker-bg-color);
+    background-color: var(--accent-color) !important;
+    border: 1px var(--accent-color) solid;
+}
+
 /* Nav Bar */
 
 .custom-navbar {
@@ -46,7 +87,6 @@ body {
     position: relative !important ; /* Ensures shadow renders, without this shadow get's hidden by bootstrap */
     z-index: 10; /* Keeps navbar on top on content*/
 }
-
 
 .custom-navbar .navbar-brand {
     font-size: 1.7rem; /* Font size for Shiftrix logo on nav */
@@ -75,7 +115,6 @@ body {
     box-shadow: none;
 }
 
-
 /* Focal Image */
 
 #focalImage {
@@ -93,7 +132,7 @@ body {
 }
 
 #focalImage .d-flex {
-    flex-direction: column; /* Ensures text stacks */
+    flex-direction: column; /* Ensures text stacks on focal image */
     justify-content: center;
     text-align: left;
 }
@@ -145,7 +184,6 @@ div p {
 }
 
 /* FAQ - Accordion Styles */
-
 
 .accordion {
     background-color: #232323;
@@ -203,7 +241,6 @@ div p {
     filter: brightness(0) invert(0);
 }
 
-
 /* without this all FAQ buttons would be have the hover style on page load */
 .accordion-button:not(:hover):not(:focus) {
     background-color: var(--darker-bg-color) !important; /* Adjust to match default */
@@ -220,7 +257,6 @@ footer h1 {
     color: var(--secondary-color);
 }
 
-
 .social-networks {
     text-align: center;
     padding: 20px 0;
@@ -233,7 +269,6 @@ footer h1 {
     color: var(--accent-color);
     font-size: 25px;
 }
-
 
 /* Media Queries */
 
@@ -298,7 +333,6 @@ footer h1 {
     }
 }
 
-
 /* Large screens (1024px width) */
 @media (min-width: 1024px) {
     
@@ -326,12 +360,6 @@ footer h1 {
 
     .accordion {
         max-width: 100%;
-    }
-
-    /* Form Backgrounds */
-
-    .form-background {
-        background-color: var(--darker-bg-color);
     }
 
     /* Footer */
