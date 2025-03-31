@@ -121,8 +121,7 @@ body {
     height: 600px;
     width: 100%;
     background: linear-gradient(to top, #333333 0%, transparent 20%),
-    url('../images/focal-image.png')
-    ;
+    url('../images/focal-image.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -181,6 +180,7 @@ div p {
 
 .custom-card-header {
     color: var(--accent-color);
+    text-align: center !important;
 }
 
 /* FAQ - Accordion Styles */
@@ -230,6 +230,7 @@ div p {
     color: #ffffff;
   }
 
+
   /* Default arrow color (white) */
 .accordion-button::after {
     filter: brightness(0) invert(1);
@@ -246,6 +247,7 @@ div p {
     background-color: var(--darker-bg-color) !important; /* Adjust to match default */
     color: var(--secondary-color);
 }
+
 
 /* Footer */
 
@@ -292,6 +294,7 @@ footer h1 {
         max-width: 85%;
     }
 
+
      /* Footer */
     .custom-icon {
         color: var(--accent-color);
@@ -328,6 +331,7 @@ footer h1 {
     .accordion {
         max-width: 95%;
     }
+
 
     /* Footer */
 
