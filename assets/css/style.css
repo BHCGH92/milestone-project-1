@@ -84,7 +84,7 @@ body {
 }
 
 .custom-navbar {
-    position: relative !important ; /* Ensures shadow renders, without this shadow get's hidden by bootstrap */
+    position: relative !important ; /* Ensures shadow renders, without this the shadow get's hidden by bootstrap */
     z-index: 10; /* Keeps navbar on top on content*/
 }
 
@@ -131,7 +131,7 @@ body {
 }
 
 #focalImage .d-flex {
-    flex-direction: column; /* Ensures text stacks on focal image */
+    flex-direction: column;
     justify-content: center;
     text-align: left;
 }
@@ -241,9 +241,9 @@ div p {
     filter: brightness(0) invert(0);
 }
 
-/* without this all FAQ buttons would be have the hover style on page load */
+/* without this all FAQ buttons would have the hover style on page load */
 .accordion-button:not(:hover):not(:focus) {
-    background-color: var(--darker-bg-color) !important; /* Adjust to match default */
+    background-color: var(--darker-bg-color) !important;
     color: var(--secondary-color);
 }
 
